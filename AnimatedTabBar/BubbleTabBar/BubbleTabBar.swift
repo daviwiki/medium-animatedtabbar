@@ -153,15 +153,10 @@ class BubbleTabBar: UIView {
      Redraw the background tabbar
      */
     private func redrawBackground() {
-        guard let selectedTab = selectedTab else { return }
-        let itemLocation = centerXFor(selectedTab)
+        guard let index = selectedIndex else { return }
+        let itemLocation = centerXFor(index)
         backShape.path = backgroundPath(itemLocation).cgPath
         backShape.fillColor = UIColor.white.cgColor
-    }
-    
-    private func centerXFor(_ tab: Tab) -> CGFloat {
-        guard let index = selectedIndex else { return 0 }
-        return centerXFor(index)
     }
     
     /**

@@ -56,7 +56,6 @@ class BubbleTabBar: UIView {
             let center = centerXFor(i)
             let clickableArea = (center-clickableRadius)...(center+clickableRadius)
             if clickableArea.contains(location.x) {
-                _didSelectTab.send(.willSelect(i))
                 selectAnimation(i, animated: true)
                 return
             }
@@ -183,6 +182,7 @@ class BubbleTabBar: UIView {
         guard selectedTab != tabs[index] else { return }
         guard let previousIndex = selectedIndex else { return }
         
+        _didSelectTab.send(.willSelect(index))
         selectedTab = tabs[index]
         
         // Animate background

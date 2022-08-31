@@ -1,10 +1,12 @@
 # Description
 
-Include a full implementation of an animated TabBar components
+Include a full implementation of an animated TabBar components.
+
+This components is based in a Kavsoft channel video that develop this same component but using SwiftUI. I recommend that you could check this video [here :)](https://www.youtube.com/watch?v=Lw-vimpu6Cs&ab_channel=Kavsoft).
 
 # Result
 
-You could see the result in the following gif
+You could see the result in the following gif:
 
 ![Result](./docs/tabbar-result.gif)
 
